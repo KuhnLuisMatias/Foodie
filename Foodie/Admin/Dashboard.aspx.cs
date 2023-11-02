@@ -11,7 +11,8 @@ namespace Foodie.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+                Session["breadCrumb"] = " ";
         }
     }
 }
