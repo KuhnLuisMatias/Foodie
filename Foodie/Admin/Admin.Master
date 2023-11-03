@@ -136,9 +136,12 @@
                                     </a>
                                     <ul class="show-notification profile-notification">
                                         <li>
-                                            <a href="auth-normal-sign-in.html">
+                                            <!--<a href="auth-normal-sign-in.html">
                                                 <i class="ti-layout-sidebar-left"></i>Logout
-                                            </a>
+                                            </a>-->
+                                            <asp:LinkButton ID="lbLogout" runat="server" CausesValidation="false" OnClick="lbLogout_Click">
+                                            <i class="ti-layout-sidebar-left"></i> Logout
+                                            </asp:LinkButton>
                                         </li>
                                     </ul>
                                 </li>

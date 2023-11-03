@@ -21,8 +21,11 @@ namespace Foodie.Admin
         {
             if (!IsPostBack)
             {
-                Session["breadCrum"] = "Category";
-                GetCategories();
+                Session["breadCrum"] = "Category"; 
+                if (Session["admin"] == null)
+                    Response.Redirect("../User/Login.aspx");
+                else
+                    GetCategories();
             }
             lblMsg.Visible = false;
         }

@@ -145,13 +145,15 @@
                                         </g>
                                     </svg>
                                 </a>
-                                <!--No funciona con esto descomentado
-                                    <form class="form-inline">
+
+                                <div class="form-inline">
                                     <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                         <i class="fa fa-search" aria-hidden="true"></i>
-                                    </button> 
-                                </form>-->
-                                <a href="" class="order_online">Order Online</a>
+                                    </button>
+                                </div>
+                                <!--<a href="" class="order_online">Order Online</a>
+                                -->
+                                <asp:LinkButton ID="lbLoginOrLogout" runat="server" CssClass="order_online" CausesValidation="false" OnClick="lbLoginOrLogout_Click">LinkButton</asp:LinkButton>
                             </div>
                         </div>
                     </nav>
