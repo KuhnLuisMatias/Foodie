@@ -11,12 +11,30 @@ namespace Foodie.User
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!Request.Url.AbsoluteUri.ToString().Contains("Default.aspx"))
+            if (!Request.Url.AbsoluteUri.ToString().Contains("Default.aspx"))
                 form1.Attributes.Add("class", "sub_page");
             else
             {
                 Control sliderUserControl = (Control)Page.LoadControl("SliderUserControl.ascx");
                 pnlSliderUC.Controls.Add(sliderUserControl);
+            }
+
+            if (Session["userId"] != null)
+                lbLoginOrLogout.Text = "Logout";
+            else
+                lbLoginOrLogout.Text = "Login";
+        }
+
+        protected void lbLoginOrLogout_Click(object sender, EventArgs e)
+        {
+            if (Session["userId"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                Session.Abandon();
+                Response.Redirect("Login.aspx");
             }
         }
     }
