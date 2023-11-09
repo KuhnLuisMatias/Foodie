@@ -58,6 +58,7 @@
                             <asp:TextBox
                                 ID="txtPassword"
                                 runat="server"
+                                TextMode="Password"
                                 CssClass="form-control"
                                 placeholder="Enter Password" />
                         </div>

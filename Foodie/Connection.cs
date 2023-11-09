@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 
 namespace Foodie
@@ -16,6 +20,9 @@ namespace Foodie
 
     public class Utils
     {
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataAdapter sda;
         public static bool IsValidExtension(string fileName)
         {
             bool isValid = false;
@@ -40,6 +47,45 @@ namespace Foodie
                 url_ = string.Format($"../{url}");
             return url_;
         }
-    }
+        public bool UpdateCartQuantity(int quantity, int productId, int userId)
+        {
+            bool isUpdated = false;
 
+            con = new SqlConnection(Connection.GetConnectionString());
+            cmd = new SqlCommand("Cart_Crud", con);
+            cmd.Parameters.AddWithValue("@Action", "UPDATE");
+            cmd.Parameters.AddWithValue("@ProductId", productId);
+            cmd.Parameters.AddWithValue("@Quantity", quantity);
+            cmd.Parameters.AddWithValue("@UserId", userId);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+                isUpdated = true;
+            }
+            catch (Exception ex)
+            {
+                isUpdated = false;
+                System.Web.HttpContext.Current.Response.Write("<script>alert('Error - " + ex.Message + " ');<script>");
+            }
+            finally
+            {
+                con.Close();
+            }
+            return isUpdated;
+        }
+        public int cartCount(int userId)
+        {
+            con = new SqlConnection(Connection.GetConnectionString());
+            cmd = new SqlCommand("Cart_Crud", con);
+            cmd.Parameters.AddWithValue("@Action", "SELECT");
+            cmd.Parameters.AddWithValue("@UserId", userId);
+            cmd.CommandType = CommandType.StoredProcedure;
+            sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt.Rows.Count;
+        }
+    }
 }
