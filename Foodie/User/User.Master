@@ -119,6 +119,9 @@
                                             </g>
                                         </g>
                                     </svg>
+                                    <span class="badge rounded-pill bg-warning mb-4">
+                                        <% Response.Write(Session["cartCount"]); %>
+                                    </span>
                                 </a>
 
                                 <div class="form-inline">
@@ -220,12 +223,12 @@
 
     <!-- popper js -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
+    </script>
     <!-- bootstrap js -->
     <script src="../TemplateFiles/css/js/bootstrap.js"></script>
     <!-- owl slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
+    </script>
     <!-- isotope js -->
     <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
     <!-- nice select -->
