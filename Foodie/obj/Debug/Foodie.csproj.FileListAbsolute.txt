@@ -57,3 +57,4 @@ C:\Users\Hogar\source\repos\Foodie\Foodie\obj\Debug\Foodie.csproj.CoreCompileInp
 C:\Users\Hogar\source\repos\Foodie\Foodie\obj\Debug\Foodie.csproj.CopyComplete
 C:\Users\Hogar\source\repos\Foodie\Foodie\obj\Debug\Foodie.dll
 C:\Users\Hogar\source\repos\Foodie\Foodie\obj\Debug\Foodie.pdb
+C:\Users\Hogar\source\repos\Foodie\Foodie\bin\itextsharp.dll
