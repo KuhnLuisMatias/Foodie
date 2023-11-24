@@ -1,20 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="Foodie.Admin.Contact" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-      <script>
+    <script>
         window.onload = function () {
             var seconds = 5;
             setTimeout(function () {
                 document.getElementById("<%=lblMsg.ClientID%>").style.display = "none";
             }, seconds * 1000);
         };
-      </script>
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <div class="pcoded-inner-content pt-0">
+    <div class="pcoded-inner-content pt-0">
         <div class="align-align-self-end">
             <asp:Label ID="lblMsg" runat="server" Visible="false"></asp:Label>
         </div>
-
         <div class="main-body">
             <div class="page-wrapper">
                 <div class="page-body">
@@ -25,16 +25,13 @@
                                 </div>
                                 <div class="card-block">
                                     <div class="row">
-
-
-
                                         <div class="col-12 mobile-inputs">
                                             <h4 class="sub-title">Contact Lists</h4>
                                             <div class="card-block table-border-style">
                                                 <div class="table-responsive">
 
                                                     <asp:Repeater ID="rContacts" runat="server" OnItemCommand="rContacts_ItemCommand">
-                                                        <headertemplate>
+                                                        <HeaderTemplate>
                                                             <table class="table data-table-export table-hover nowrap">
                                                                 <thead>
                                                                     <tr>
@@ -47,8 +44,8 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                        </headertemplate>
-                                                        <itemtemplate>
+                                                        </HeaderTemplate>
+                                                        <ItemTemplate>
                                                             <tr>
                                                                 <td class="table-plus"><%#Eval("SrNo") %></td>
                                                                 <td><%#Eval("Name") %></td>
@@ -64,18 +61,15 @@
                                                                     </asp:LinkButton>
                                                                 </td>
                                                             </tr>
-                                                        </itemtemplate>
-                                                        <footertemplate>
+                                                        </ItemTemplate>
+                                                        <FooterTemplate>
                                                             </tbody>
                                                              </table>
-                                                        </footertemplate>
+                                                        </FooterTemplate>
                                                     </asp:Repeater>
-
                                                 </div>
                                             </div>
-
                                         </div>
-
                                     </div>
                                 </div>
                             </div>

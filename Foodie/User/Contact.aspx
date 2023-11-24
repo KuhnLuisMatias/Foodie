@@ -41,7 +41,7 @@
                         </div>
 
                         <div>
-                            <asp:TextBox ID="txtMessage" runat="server" CssClass="form-control" place-holder="Enter Your Query/Feedback"></asp:TextBox>
+                            <asp:TextBox ID="txtMessage" runat="server" CssClass="form-control" placeholder="Enter Your Query/Feedback"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvMessage" runat="server" ErrorMessage="Message is required" ControlToValidate="txtMessage" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                         </div>
                         <div class="btn_box">

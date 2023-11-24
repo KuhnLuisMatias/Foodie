@@ -93,5 +93,35 @@ namespace Foodie
             String uniqueId = guid.ToString();
             return uniqueId;
         }
+
+    }
+
+    public class DashboardCount
+    {
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataAdapter sda;
+        SqlDataReader sdr;
+        public int Count(string name)
+        {
+            int count = 0;
+            con = new SqlConnection(Connection.GetConnectionString());
+            cmd = new SqlCommand("Dashboard", con);
+            cmd.Parameters.AddWithValue("@Action", name);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            sdr = cmd.ExecuteReader();
+
+            while (sdr.Read())
+            {
+                if (sdr[0] == DBNull.Value)
+                    count = 0;
+                else
+                    count = Convert.ToInt32(sdr[0]);
+            }
+            sdr.Close();
+            con.Close();
+            return count;
+        }
     }
 }
