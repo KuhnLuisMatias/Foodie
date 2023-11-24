@@ -75,6 +75,7 @@
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Admin\OrderStatus.aspx" />
     <Content Include="Admin\Products.aspx" />
+    <Content Include="Admin\Report.aspx" />
     <Content Include="Admin\User.aspx" />
     <Content Include="assets\css\animate.css\css\animate.css" />
     <Content Include="assets\css\bootstrap\css\bootstrap.min.css" />
@@ -211,7 +212,6 @@
     <Content Include="TemplateFiles\js\custom.js" />
     <Content Include="TemplateFiles\js\jquery-3.4.1.min.js" />
     <Content Include="User\About.aspx" />
-    <Content Include="User\Book.aspx" />
     <Content Include="User\Cart.aspx" />
     <Content Include="User\Contact.aspx" />
     <Content Include="User\Default.aspx" />
@@ -267,6 +267,13 @@
     <Compile Include="Admin\Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -285,13 +292,6 @@
     </Compile>
     <Compile Include="User\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="User\Book.aspx.cs">
-      <DependentUpon>Book.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="User\Book.aspx.designer.cs">
-      <DependentUpon>Book.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>

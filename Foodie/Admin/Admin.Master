@@ -210,7 +210,7 @@
                                 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">User's Feedback/Query</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li>
-                                        <a href="chart.html">
+                                        <a href="Contact.aspx">
                                             <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                             <span class="pcoded-mtext" data-i18n="nav.form-components.main">Contact</span>
                                             <span class="pcoded-mcaret"></span>
@@ -220,7 +220,7 @@
                                 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Reports</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li>
-                                        <a href="chart.html">
+                                        <a href="Report.aspx">
                                             <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                             <span class="pcoded-mtext" data-i18n="nav.form-components.main">Selling Report</span>
                                             <span class="pcoded-mcaret"></span>
